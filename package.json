@@ -17,6 +17,10 @@
     },
     "homepage": "https://github.com/lvovandrey/WebLessons#readme",
     "devDependencies": {
-        "gulp": "^4.0.2"
-    }
+        "browser-sync": "^2.26.14",
+        "gulp": "^4.0.2",
+        "gulp-pug": "^4.0.1",
+        "gulp-sass": "^4.1.0"
+    },
+    "dependencies": {}
 }
