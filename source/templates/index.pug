@@ -4,9 +4,11 @@ html(lang="ru")
     title= "Учимся работать с шаблонизатором Pug"
     link(href='/css/main.min.css', rel='stylesheet')
   body
-      h1 Hello, World!
-      ul.list#listItems
-          li.list__item Значение 1
-          li.list__item Значение 2
-          li.list__item Значение 3
-          li.list__item Значение 4
+    include sections/header
+    h1 Content
+    ul.list#listItems
+        li.list__item Значение 1
+        li.list__item Значение 2
+        li.list__item Значение 3
+        li.list__item Значение 4
+    include sections/footer
