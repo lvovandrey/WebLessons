@@ -53,12 +53,12 @@ gulp.task('sass:watch', function() {
 var spritesmith = require('gulp.spritesmith');
 
 gulp.task('sprite', function(cb) {
-    var spriteData = gulp.src('source/images/icons/*.png').pipe(spritesmith({
+    var spriteData = gulp.src('source/img/icons/*.png').pipe(spritesmith({
         imgName: 'sprite.png',
-        imgPath: '../images/sprite.png',
+        imgPath: '../img/sprite.png',
         cssName: 'sprite.scss'
     }));
-    spriteData.img.pipe(gulp.dest('build/images/'));
+    spriteData.img.pipe(gulp.dest('build/img/'));
     spriteData.css.pipe(gulp.dest('source/css/global/'));
     cb();
 });
@@ -72,7 +72,7 @@ gulp.task('clean', function(cb) {
 
 gulp.task('copy-images', function() {
     return gulp.src('./source/img/**/*.*')
-        .pipe(gulp.dest('build/images'));
+        .pipe(gulp.dest('build/img'));
 });
 
 gulp.task('watch', function() {

@@ -1,2 +1,23 @@
-.header
-    h1 Header
+header.header
+    .header__top
+        .container 
+            .contacts 
+                a.contact(href='e-mail:lvovandrey@mail.ru')
+                    i(class='fa fa-envelope' aria-hidden='true') 
+                        span.contact__text lvovandrey@mail.ru
+                a.contact(href='https://www.vk.com')
+                    i(class='fa fa-vk' aria-hidden='true')
+                        span.contact__text Вконтакте
+        .container 
+            .header__bottom 
+                .logo: img.logo_picture(src='img/book-icon.png' alt="VCARDS LOGO")
+                nav.nav 
+                - var items = ['Главная', 'Скачать', 'Справка','Онлайн-занятия']
+                    each item, index in items
+                        if index===0
+                            a.nav__link.nav__link--active(href="#")= item
+                        else
+                            a(href="#")= index + '. ' + item
+                a.button.header__button.button--red(href="#")
+                    i(class='fa fa-user-circle-o' aria-hidden='true')
+                        span.contact__text Личный кабинет

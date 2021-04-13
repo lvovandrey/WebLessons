@@ -28,5 +28,8 @@
         "node-sass": "^5.0.0",
         "rimraf": "^3.0.2"
     },
-    "dependencies": {}
+    "dependencies": {
+        "font-awesome": "^4.7.0",
+        "normalize.scss": "^0.1.0"
+    }
 }
