@@ -37,7 +37,7 @@ gulp.task('mytask', async function() {
 
 
 gulp.task('sass-compile', function() {
-    return gulp.src('source/sass/main.scss')
+    return gulp.src('source/styles/main.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer({
             cascade: false
@@ -75,6 +75,11 @@ gulp.task('copy-images', function() {
         .pipe(gulp.dest('build/img'));
 });
 
+gulp.task('copy-fonts', function() {
+    return gulp.src('./source/fonts/**/*.*')
+        .pipe(gulp.dest('build/fonts'));
+});
+
 gulp.task('watch', function() {
     gulp.watch('source/templates/**/*.pug', gulp.series('template-compile'));
     gulp.watch('source/sass/**/*.scss', gulp.series('sass-compile'));
@@ -83,6 +88,6 @@ gulp.task('watch', function() {
 
 gulp.task('default', gulp.series(
     'clean',
-    gulp.parallel('template-compile', 'sass-compile', 'sprite', 'copy-images'),
+    gulp.parallel('template-compile', 'sass-compile', 'sprite', 'copy-images', 'copy-fonts'),
     gulp.parallel('watch', 'server')
 ));
