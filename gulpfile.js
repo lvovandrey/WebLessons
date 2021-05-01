@@ -82,7 +82,7 @@ gulp.task('copy-fonts', function() {
 
 gulp.task('watch', function() {
     gulp.watch('source/templates/**/*.pug', gulp.series('template-compile'));
-    gulp.watch('source/sass/**/*.scss', gulp.series('sass-compile'));
+    gulp.watch('source/styles/**/*.scss', gulp.series('sass-compile'));
 
 });
 
