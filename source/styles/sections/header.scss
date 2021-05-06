@@ -1,4 +1,13 @@
-$header-bg-color: rgb(221, 155, 155);
+$header-bg-color: rgb(155, 189, 221);
 .header {
     background-color: $header-bg-color
+}
+
+.header__top {
+    background-color: gray;
+}
+
+.logo_picture {
+    height: 4rem;
+    width: 4rem;
 }

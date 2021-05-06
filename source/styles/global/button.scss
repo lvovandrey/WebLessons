@@ -1,0 +1,25 @@
+.button {
+    display: inline-block;
+    border-radius: 3px;
+    padding: 10px 22px 7px;
+    text-decoration: none;
+    &__red {
+        background: rgb(190, 27, 27);
+        color: white;
+        transition: 0.3s;
+        &:hover {
+            background: lighten($color: rgb(190, 27, 27), $amount: 10%);
+        }
+    }
+    &__yellow {
+        background: rgb(147, 190, 27);
+        color: rgb(0, 0, 0);
+        transition: 0.3s;
+        &:hover {
+            background: lighten($color: rgb(147, 190, 27), $amount: 25%);
+        }
+    }
+    &__text_uppercase {
+        text-transform: uppercase;
+    }
+}

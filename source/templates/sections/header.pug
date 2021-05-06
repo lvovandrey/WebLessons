@@ -9,8 +9,8 @@ header.header
                 a.contact(href='https://www.vk.com')
                     i(class='fa fa-vk' aria-hidden='true')
                         span.contact__text Вконтакте
-        .container 
-            .header__bottom 
+    .header__bottom 
+            .container 
                 .logo: img.logo_picture(src='img/book-icon.png' alt="VCARDS LOGO")
                 nav.nav 
                 - var items = ['Главная', 'Скачать', 'Справка','Онлайн-занятия']
@@ -18,7 +18,7 @@ header.header
                         if index===0
                             a.nav__link.nav__link--active(href="#")= item
                         else
-                            a(href="#")= index + '. ' + item
-                a.button.header__button.button--red(href="#")
+                            a(href="#")= (index+1) + '.' + item 
+                a.button.header__button.button__red(href="#")
                     i(class='fa fa-user-circle-o' aria-hidden='true')
                         span.contact__text Личный кабинет
