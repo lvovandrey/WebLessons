@@ -1,11 +1,12 @@
 header.header
-    h1 Header
     .header__top
         .container 
             include contacts
     .container 
         .header__bottom 
-            .logo: img.logo_picture(src='img/book-icon.png' alt="VCARDS LOGO" width=45 height=45)
+            .logo
+                img.logo__picture(src='img/book-icon.png' alt="VCARDS LOGO" width=45 height=45)
+                h1.logo__text VCARDS
             include nav.pug
             a.button.header__button.button__red(href="#")
                 i(class='fa fa-user-circle-o' aria-hidden='true')

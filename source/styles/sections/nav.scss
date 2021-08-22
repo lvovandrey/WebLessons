@@ -1,5 +1,6 @@
-$nav-link-font-size:18px;
-$nav-link-font-color: rgb(97, 0, 0);
+$nav-link-font-size:15px;
+$nav-link-font-color: #ffdfdf;
+$nav-activelink-font-color:  rgb(250, 73, 73);
 
 .nav{
   display: inline-block;
@@ -7,19 +8,23 @@ $nav-link-font-color: rgb(97, 0, 0);
   padding-top: 7px;
   margin-right: 15px;
 
+  a{
+    margin-left: 15px;
+  }
+  
   &__link{
     display: inline-block;
     vertical-align: top;
     text-decoration: none;
     font-size:$nav-link-font-size;
-    font-family: $ff-main-bold;
+    font-family: $ff-main;
     text-transform: capitalize;
     color: $nav-link-font-color;
     transition: 0.3s;
 
     &:hover, 
     &__active{
-        color:lighten($color: $nav-link-font-color, $amount: 20%);
+        color:$nav-activelink-font-color;
     }
 
     &:after{

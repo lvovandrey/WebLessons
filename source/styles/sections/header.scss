@@ -1,7 +1,8 @@
-$header-bg-color: #333;
-$contact-color:#222;
-$contact-text-size: 15px;
-$contact-icon-size: 18px;
+$header-bg-color: #222;
+$contact-color:rgb(255, 255, 255);
+$contact-text-size: 14px;
+$contact-icon-size: 14px;
+$logo-text-color: rgb(222,200,200);
 
 .header{
   background-color: $header-bg-color;
@@ -26,7 +27,7 @@ $contact-icon-size: 18px;
 .contact{
 
   display: inline-block;
-  padding: 10px 10px 8px;
+  padding: 5px 15px 2px;
   color: $contact-color;
   vertical-align: top;
   transition: 0.3s;
@@ -49,8 +50,26 @@ $contact-icon-size: 18px;
 }
 
 
-.logo_picture {
-  height: 4rem;
-  width: 4rem;
+.logo__picture {
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  vertical-align: middle;
+  
 }
+.logo__text{
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  font-family: $ff-main-bold;
+  font-size: 22px;
+  color: $logo-text-color;
+  margin-left: 5px;
+}
+ .logo{
+   display: inline-block;
+   vertical-align: middle;
+   margin:0px;
+ }
+
 
