@@ -8,17 +8,17 @@ header.header
                         span.contact__text lvovandrey@mail.ru
                 a.contact(href='https://www.vk.com')
                     i(class='fa fa-vk' aria-hidden='true')
-                        span.contact__text Вконтакте
     .header__bottom 
             .container 
-                .logo: img.logo_picture(src='img/book-icon.png' alt="VCARDS LOGO")
+                .logo: img.logo_picture(src='img/book-icon.png' alt="VCARDS LOGO" width=45 height=45)
                 nav.nav 
                 - var items = ['Главная', 'Скачать', 'Справка','Онлайн-занятия']
                     each item, index in items
+                        -var itemIndexAndName =  (index+1) + '.' + item
                         if index===0
-                            a.nav__link.nav__link--active(href="#")= item
+                            a.nav__link.nav__link--active(href="#")=  itemIndexAndName
                         else
-                            a(href="#")= (index+1) + '.' + item 
+                            a.nav__link(href="#")= itemIndexAndName 
                 a.button.header__button.button__red(href="#")
                     i(class='fa fa-user-circle-o' aria-hidden='true')
                         span.contact__text Личный кабинет

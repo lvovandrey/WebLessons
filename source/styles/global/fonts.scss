@@ -1,4 +1,9 @@
 @font-face {
+  font-family: 'merriweather-light';
+  src: url('../../fonts/Merriweather-Light.ttf') format('ttf')
+}
+
+  @font-face {
     font-family: "georgia-bold";
     src: url("../fonts/georgia-bold.woff") format("woff"), url("../fonts/georgia-bold.woff2") format("woff2");
     font-weight: bold;

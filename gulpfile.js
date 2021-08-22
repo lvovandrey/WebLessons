@@ -4,10 +4,11 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 sass.compiler = require('node-sass');
 var rename = require('gulp-rename');
-
 const browserSync = require('browser-sync').create();
 const pug = require('gulp-pug');
-
+var spritesmith = require('gulp.spritesmith');
+var rimraf = require('rimraf');
+const { watch } = require('browser-sync');
 const autoprefixer = require('gulp-autoprefixer');
 
 // Static server
@@ -30,12 +31,6 @@ gulp.task('template-compile', function() {
         .pipe(gulp.dest('build'))
 });
 
-gulp.task('mytask', async function() {
-    console.log('Hi from gulp-task');
-});
-
-
-
 gulp.task('sass-compile', function() {
     return gulp.src('source/styles/main.scss')
         .pipe(sass().on('error', sass.logError))
@@ -50,8 +45,6 @@ gulp.task('sass:watch', function() {
     gulp.watch('./sass/**/*.scss', ['sass']);
 });
 
-var spritesmith = require('gulp.spritesmith');
-
 gulp.task('sprite', function(cb) {
     var spriteData = gulp.src('source/img/icons/*.png').pipe(spritesmith({
         imgName: 'sprite.png',
@@ -62,9 +55,6 @@ gulp.task('sprite', function(cb) {
     spriteData.css.pipe(gulp.dest('source/css/global/'));
     cb();
 });
-
-var rimraf = require('rimraf');
-const { watch } = require('browser-sync');
 
 gulp.task('clean', function(cb) {
     return rimraf('build', cb);

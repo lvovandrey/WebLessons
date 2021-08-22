@@ -1,13 +1,36 @@
-$header-bg-color: rgb(155, 189, 221);
-.header {
-    background-color: $header-bg-color
+$header-bg-color: #333;
+$contact-color:#222;
+.header{
+  background-color: $header-bg-color;
+
+  &__top {
+    background-color: gray;
+    border-bottom: 1px solid black;
+  }
+
 }
 
-.header__top {
-    background-color: gray;
+.contacts{
+  text-align: right;  
 }
+.contact{
+  display: inline-block;
+  padding: 10px 10px 8px;
+  color: $contact-color;
+  vertical-align: top;
+  transition: 0.3s;
+  &:hover{
+    color:lighten($color: $contact-color, $amount: 20%)
+  }
+}
+
+
 
 .logo_picture {
-    height: 4rem;
-    width: 4rem;
+  height: 4rem;
+  width: 4rem;
+}
+
+.nav__link{
+  text-decoration: none;
 }
