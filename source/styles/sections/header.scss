@@ -1,5 +1,8 @@
 $header-bg-color: #333;
 $contact-color:#222;
+$contact-text-size: 15px;
+$contact-icon-size: 18px;
+
 .header{
   background-color: $header-bg-color;
 
@@ -8,22 +11,42 @@ $contact-color:#222;
     border-bottom: 1px solid black;
   }
 
+  &__bottom {
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px 30px;
+  }
 }
 
 .contacts{
   text-align: right;  
 }
 .contact{
+
   display: inline-block;
   padding: 10px 10px 8px;
   color: $contact-color;
   vertical-align: top;
   transition: 0.3s;
+  
   &:hover{
     color:lighten($color: $contact-color, $amount: 20%)
   }
+
+  &__icon{
+    margin: 0.3rem;
+    font-size: $contact-icon-size;
+  }
+
 }
 
+.contact__text
+{
+  font-family: $ff-main;
+  font-size:$contact-text-size;
+}
 
 
 .logo_picture {
@@ -31,6 +54,3 @@ $contact-color:#222;
   width: 4rem;
 }
 
-.nav__link{
-  text-decoration: none;
-}
